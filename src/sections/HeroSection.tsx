@@ -131,7 +131,7 @@ const HeroSection = () => {
               
               {/* Character Image */}
               <img
-                src="/hero-character.png"
+                src={`${import.meta.env.BASE_URL}hero-character.png`}
                 alt="健康指导员"
                 className="relative z-10 w-full max-w-md lg:max-w-lg drop-shadow-2xl"
               />

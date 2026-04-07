@@ -91,7 +91,7 @@ const FeatureSection = () => {
               
               {/* Character */}
               <img
-                src="/feature-character.png"
+                src={`${import.meta.env.BASE_URL}feature-character.png`}
                 alt="健康助手"
                 className="relative z-10 w-full max-w-md drop-shadow-2xl animate-breathe"
               />

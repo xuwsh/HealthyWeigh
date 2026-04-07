@@ -11,12 +11,14 @@ interface RecipeCard {
   color: string;
 }
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const recipes: RecipeCard[] = [
   {
     id: 'northeast',
     title: '东北地区食谱',
     subtitle: '炖菜为主，温热滋补',
-    image: '/recipe-northeast.jpg',
+    image: `${BASE_URL}recipe-northeast.jpg`,
     tag: '温热滋补',
     color: 'from-orange-400 to-red-400'
   },
@@ -24,7 +26,7 @@ const recipes: RecipeCard[] = [
     id: 'northwest',
     title: '西北地区食谱',
     subtitle: '面食搭配，营养均衡',
-    image: '/recipe-2.jpg',
+    image: `${BASE_URL}recipe-2.jpg`,
     tag: '营养均衡',
     color: 'from-yellow-400 to-orange-400'
   },
@@ -32,7 +34,7 @@ const recipes: RecipeCard[] = [
     id: 'south',
     title: '南方地区食谱',
     subtitle: '清淡鲜美，汤品为主',
-    image: '/recipe-4.jpg',
+    image: `${BASE_URL}recipe-4.jpg`,
     tag: '清淡养生',
     color: 'from-green-400 to-teal-400'
   },
@@ -40,7 +42,7 @@ const recipes: RecipeCard[] = [
     id: 'general',
     title: '通用减脂餐',
     subtitle: '科学配比，健康减脂',
-    image: '/recipe-1.jpg',
+    image: `${BASE_URL}recipe-1.jpg`,
     tag: '减脂首选',
     color: 'from-pink-400 to-rose-400'
   }

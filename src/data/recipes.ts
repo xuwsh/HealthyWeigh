@@ -39,7 +39,7 @@ export const regionRecipesData: RegionRecipes[] = [
     name: '东北地区',
     description: '东北地区居民饮食以米面、畜禽肉及奶类为主，烹饪方式以炖菜为主，肥厚实在，味重色浓。',
     features: ['主食以米面为主', '畜禽肉摄入较多', '炖菜烹饪方式', '味重色浓'],
-    image: '/recipe-northeast.jpg',
+    image: `${import.meta.env.BASE_URL}recipe-northeast.jpg`,
     color: 'from-orange-400 to-red-500',
     mealPlans: {
       spring: [
@@ -157,7 +157,7 @@ export const regionRecipesData: RegionRecipes[] = [
     name: '西北地区',
     description: '西北居民喜食面食，主食以小麦、玉米和其他杂粮为主，肉类以牛、羊肉为主，瓜果丰富，绿叶蔬菜相对较少。',
     features: ['面食为主食', '牛羊肉较多', '瓜果丰富', '绿叶蔬菜较少'],
-    image: '/recipe-2.jpg',
+    image: `${import.meta.env.BASE_URL}recipe-2.jpg`,
     color: 'from-yellow-400 to-orange-500',
     mealPlans: {
       spring: [
@@ -350,7 +350,7 @@ export const regionRecipesData: RegionRecipes[] = [
     name: '南方地区',
     description: '南方地区饮食以大米为主食，口味偏清淡，蔬菜、水果、水产品丰富，具有东方健康膳食模式的特点。',
     features: ['大米为主食', '口味偏清淡', '蔬果丰富', '水产品充足'],
-    image: '/recipe-4.jpg',
+    image: `${import.meta.env.BASE_URL}recipe-4.jpg`,
     color: 'from-green-400 to-teal-500',
     mealPlans: {
       spring: [
@@ -468,7 +468,7 @@ export const regionRecipesData: RegionRecipes[] = [
     name: '通用减脂餐',
     description: '科学配比的通用减脂食谱，适合各地区人群参考使用，营养均衡，热量控制科学。',
     features: ['科学配比', '营养均衡', '热量可控', '简单易做'],
-    image: '/recipe-1.jpg',
+    image: `${import.meta.env.BASE_URL}recipe-1.jpg`,
     color: 'from-pink-400 to-rose-500',
     mealPlans: {
       spring: [
