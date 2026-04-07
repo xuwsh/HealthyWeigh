@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { Heart, BookOpen, Mail, ExternalLink } from 'lucide-react';
+import { Heart, BookOpen, Mail, ExternalLink, QrCode } from 'lucide-react';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
@@ -66,6 +66,21 @@ const Footer = () => {
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <Mail className="w-4 h-4" />
               <span>了解更多请访问国家卫健委官网</span>
+            </div>
+          </div>
+
+          {/* QR Code */}
+          <div className="lg:col-span-1 flex flex-col items-center justify-center space-y-3">
+            <div className="bg-white p-3 rounded-xl shadow-lg">
+              <img
+                src={`${import.meta.env.BASE_URL}qrcode.png`}
+                alt="扫码关注公众号"
+                className="w-28 h-28"
+              />
+            </div>
+            <div className="flex items-center gap-2 text-[#F6B5A6]">
+              <QrCode className="w-4 h-4" />
+              <span className="text-sm font-medium">扫码关注公众号</span>
             </div>
           </div>
 
