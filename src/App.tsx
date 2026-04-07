@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/HealthyWeigh">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/recipe/:regionId" element={<RecipeDetail />} />
