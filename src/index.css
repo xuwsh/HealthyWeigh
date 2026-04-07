@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&family=Nunito+Sans:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 100% 98%;
+    --foreground: 0 0% 29%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 29%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 29%;
+    --primary: 11 79% 81%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 8 67% 87%;
+    --secondary-foreground: 0 0% 29%;
+    --muted: 20 50% 96%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 20 70% 90%;
+    --accent-foreground: 0 0% 29%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 30% 90%;
+    --input: 20 30% 90%;
+    --ring: 11 79% 81%;
+    --radius: 1rem;
+    
+    --peach: #F6B5A6;
+    --light-pink: #F7C5C0;
+    --peach-light: #F9D1C3;
+    --warm-white: #FFF9F5;
+    --dark-gray: #4A4A4A;
+    --medium-gray: #6A6A6A;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: var(--warm-white);
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: var(--dark-gray);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--peach) 0%, var(--light-pink) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-gradient-warm {
+    background: linear-gradient(135deg, var(--warm-white) 0%, var(--peach-light) 50%, var(--light-pink) 100%);
+  }
+  
+  .bg-pattern {
+    background-image: url('/fruit-pattern.png');
+    background-repeat: repeat;
+    background-size: 200px;
+  }
+  
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .shadow-soft {
+    box-shadow: 0 10px 40px -10px rgba(246, 181, 166, 0.3);
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 30px rgba(246, 181, 166, 0.5);
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-breathe {
+    animation: breathe 4s ease-in-out infinite;
+  }
+  
+  .animate-pulse-soft {
+    animation: pulse-soft 1.5s ease-in-out infinite;
+  }
+  
+  .animate-spin-slow {
+    animation: spin 60s linear infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--warm-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--peach);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light-pink);
+}
+
+/* Selection */
+::selection {
+  background: var(--peach);
+  color: white;
+}
